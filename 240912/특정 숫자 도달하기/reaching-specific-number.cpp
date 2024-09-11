@@ -21,7 +21,7 @@ int main() {
     }
 
     if (check == 0)
-        check = 9;
+        check = 10;
 
     int sum = 0;
     for (int i = 0; i < check; ++i)
