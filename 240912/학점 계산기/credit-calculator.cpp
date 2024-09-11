@@ -20,6 +20,8 @@ int main() {
     double result = sum / (double)number;
     double avg = round(result * 10.0) / 10.0;
 
+    cout<<fixed;
+    cout.precision(1);
     cout << avg << endl;
 
     if (avg >= 4.0)
