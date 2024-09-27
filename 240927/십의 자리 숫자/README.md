@@ -4,7 +4,7 @@
 |---|---|---|
 |[Novice Low / 1차원 배열 / Count 배열](https://www.codetree.ai/missions?missionId=4)|10xp|![쉬움][easy]|
 
-
+git 연동 오류로 인해 26일차, 27일차 1대부분 연동안됨. 
 
 
 
