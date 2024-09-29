@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -9,7 +10,7 @@ int main() {
 	int idx = -1;
 
 	// 문자 탐색
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 6; i++) {
 		char temp;
 		cin >> temp;
 		if (temp == word[i]) {
