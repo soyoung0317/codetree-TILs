@@ -1,64 +1,48 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 int main() {
-    int number, question;
-    cin >> number >> question;
+    // 여기에 코드를 작성해주세요.
 
-    int* arr = new int[number];
+    int n, q, a;
+    cin >> n >> q;
 
-    for (int i = 0; i < number; i++) {
-        cin >> arr[i];
+    int* ar = new int[n];
+
+    for (int i = 0; i < n; i++) {
+        cin >> ar[i];
     }
 
-    string* str_arr = new string[number];
-    int q_compare = 0;
+    int e, t, l;
 
-    while (q_compare < question ) {
-        int q_q, q_n;
-        cin >> q_q >> q_n;
+    for (int i = 0; i < q; i++) {
+        cin >> e >> t;
+        if (e == 1) {
+            cout << ar[t - 1] << endl;
+        }
 
-        switch (q_q)
-        {
-        case 1:
-            str_arr[q_compare] = to_string(arr[q_n-1]);
-            break;
-        case 2:
-        {
-        int index = -1;
-        for (int i = 0; i < number; i++) {
-            if (q_n == arr[i]) {
-                index = i + 1;
-                break;
+        if (e == 2) {
+            int cnt = 0;
+
+            for (int u = 0; u < n; u++) {
+                if (ar[u] == t) {
+                    cnt++;
+                    cout << u + 1 << endl;
+                    break;
+                }
+            }
+            if (cnt == 0) {
+                cout << 0 << endl;
             }
         }
 
-        if (index == -1)
-            str_arr[q_compare] = "0";
-        else
-            str_arr[q_compare] = to_string(index);
-        }
-            break;
-        case 3:
-            int limit = 0;
-            cin >> limit;
-            string str_temp = "";
-            
-            for (int i = q_n - 1; i <= limit - 1; i++) {
-                str_temp += to_string(arr[i]);
-                str_temp += " ";
+        if (e == 3) {
+            cin >> l;
+            for (int k = t - 1; k < l; k++) {
+                cout << ar[k] << " ";
             }
-            str_arr[q_compare] = str_temp;
-            break;
+            cout << endl;
         }
-
-        ++q_compare;
-    }
-
-    for (int i = 0; i < number; i++) {
-        cout << str_arr[i] << endl;
     }
     return 0;
 }
