@@ -19,7 +19,7 @@ int main() {
     }
 
     bool bCheck = false;
-    int iCount = 1;
+    int iCount = -1;
     for (int i = 0; i < cnt_a; i++) {
         
         if (bCheck)
@@ -30,9 +30,10 @@ int main() {
                 break;
         }
         
-        if (arr_a[i] == arr_b[0])
+        if (arr_a[i] == arr_b[0]){
+            iCount = 1;
             bCheck = true;
-
+        }
     }
 
     if (iCount == cnt_b)
