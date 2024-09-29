@@ -23,7 +23,7 @@ int main() {
         if (arr[i] == 0)
             continue;
 
-        answer += pow(i, arr[i]);
+        answer += pow(arr[i], 2);
     }
 
     cout << answer << endl;
