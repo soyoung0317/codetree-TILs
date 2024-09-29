@@ -10,7 +10,7 @@ int main() {
     int answer = 0;
     int arr[1000] = { 0 };
 
-    while (num_a >= 1)
+    while (num_a > 1)
     {
         int temp = num_a % num_b;
         arr[temp] += 1;
