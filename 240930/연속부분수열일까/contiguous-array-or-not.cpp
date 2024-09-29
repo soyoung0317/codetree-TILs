@@ -20,19 +20,23 @@ int main() {
 
     bool bCheck = false;
     int iCount = -1;
-    for (int i = 0; i < cnt_a; i++) {
+    for (int i = 0; i < cnt_a ; i++) {
         
-        if (bCheck)
+        if (bCheck) // 연속체크 확인중
         {
             if (arr_a[i] == arr_b[iCount])
                 iCount += 1;
-            else
-                break;
+            else // 중간에 끊김
+                bCheck = false;
         }
         
         if (arr_a[i] == arr_b[0] && !bCheck){
+            if (iCount == cnt_b) // 끊겼는데 그 전에 이미 완성함 -> 탈출
+                break;
+            else{ // 처음부터 다시 
             iCount = 1;
             bCheck = true;
+            }
         }
     }
 
