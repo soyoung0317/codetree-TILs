@@ -16,7 +16,7 @@ int main() {
     string* str_arr = new string[number];
     int q_compare = 0;
 
-    while (question > 0) {
+    while (q_compare < question ) {
         int q_q, q_n;
         cin >> q_q >> q_n;
 
@@ -55,7 +55,6 @@ int main() {
         }
 
         ++q_compare;
-        question--;
     }
 
     for (int i = 0; i < number; i++) {
