@@ -15,14 +15,14 @@ int main() {
     for (int i = 0; i < number; i++) {
         cin >> arr[i];
 
-        if (arr[i] < min_number)
+        if (arr[i] < min_number) { //갱신
             min_number = arr[i];
+            count = 1;
+        }
+        else
+            if(arr[i] == min_number)
+                count++;
     }
-
-    for (int i = 0; i < number; i++) 
-        if (arr[i] == min_number)
-            count++;
-
     cout << min_number << " " << count << endl;
 
     return 0;
