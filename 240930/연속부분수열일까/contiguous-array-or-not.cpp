@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -23,8 +24,10 @@ int main() {
         
         if (bCheck)
         {
-            arr_a[i] == arr_b[iCount];
-            iCount++;
+            if (arr_a[i] == arr_b[iCount])
+                iCount += 1;
+            else
+                break;
         }
         
         if (arr_a[i] == arr_b[0])
