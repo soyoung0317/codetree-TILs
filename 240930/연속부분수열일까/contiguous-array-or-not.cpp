@@ -30,7 +30,7 @@ int main() {
                 break;
         }
         
-        if (arr_a[i] == arr_b[0]){
+        if (arr_a[i] == arr_b[0] && !bCheck){
             iCount = 1;
             bCheck = true;
         }
