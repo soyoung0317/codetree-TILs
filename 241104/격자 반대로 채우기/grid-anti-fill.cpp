@@ -23,10 +23,14 @@ int main() {
             side == true ? row-- : row++;
 
             if (row < 0 || row == size)
+            {
+                side == true ? row++ : row--;
                 break;
+            }
             else
                 count++;
         }
+        count++;
     }
 
     // 결과 출력 
